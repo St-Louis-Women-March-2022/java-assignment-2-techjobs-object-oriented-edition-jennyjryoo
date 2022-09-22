@@ -58,7 +58,7 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField() {
         Job testJob = new Job();
-        Assert.assertEquals("OOPS! This job does not seem to exist.",testJob.toString());
+        Assert.assertEquals("\nOOPS! This job does not seem to exist.\n",testJob.toString());
 
         Job testJob2 = new Job("Product tester", new Employer(), new Location(), new PositionType(), new CoreCompetency());
       Assert.assertEquals("\nID: 2\nName: Product tester\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n",testJob2.toString());

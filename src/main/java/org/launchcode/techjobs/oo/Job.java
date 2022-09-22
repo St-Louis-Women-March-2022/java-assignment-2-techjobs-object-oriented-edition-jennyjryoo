@@ -89,9 +89,50 @@ public class Job {
         return Objects.hash(id);
     }
 
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
+
+    @Override
+    public String toString() {
+        String printName;
+        if (this.name == null) {
+            printName = "Data not available";
+        } else {
+            printName = this.name;
+        }
+        String printEmployer;
+        if (this.employer == null || this.employer.getValue() == null || this.employer.getValue().length()== 0) {
+            printEmployer = "Data not available";
+        } else {
+            printEmployer = this.employer.toString();
+        }
+        String printLocation;
+        if (this.location == null || this.location.getValue() == null || this.location.getValue().length() == 0) {
+            printLocation = "Data not available";
+        } else {
+            printLocation = this.location.toString();
+        }
+        String printPositionType;
+        if (this.positionType == null || this.positionType.getValue() == null || this.positionType.getValue().length() == 0) {
+            printPositionType = "Data not available";
+        } else {
+            printPositionType = this.positionType.toString();
+        }
+        String printCoreCompetency;
+        if (this.coreCompetency == null || this.coreCompetency.getValue() == null || this.coreCompetency.getValue().length() == 0) {
+            printCoreCompetency = "Data not available";
+        } else {
+            printCoreCompetency = this.coreCompetency.toString();
+        }
+
+        if (this.name != null || this.employer != null || this.location != null || this.positionType != null || this.coreCompetency != null) {
+            return "\nID: "+this.id+"\nName: "+printName+"\nEmployer: "+printEmployer+"\nLocation: "+printLocation+"\nPosition Type: "+printPositionType+"\nCore Competency: "+printCoreCompetency+"\n";
+        } else {
+            return "\nOOPS! This job does not seem to exist.\n";
+        }
+    }
 }

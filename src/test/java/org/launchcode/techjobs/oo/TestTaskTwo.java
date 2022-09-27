@@ -22,7 +22,7 @@ public class TestTaskTwo extends AbstractTest {
         try {
             theConstructor = theClass.getConstructor(String.class);
         } catch (NoSuchMethodException e) {
-            fail("Location does not have a constructor that takes a String parameter");
+            fail("Location does not have a constructor that takes a String parassertNotEquals assertNotEquals ameter");
         }
     }
 

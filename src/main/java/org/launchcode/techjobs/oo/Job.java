@@ -99,7 +99,7 @@ public class Job {
     @Override
     public String toString() {
         String printName;
-        if (this.name == null) {
+        if (this.name == null || this.name.equals("")) {
             printName = "Data not available";
         } else {
             printName = this.name;

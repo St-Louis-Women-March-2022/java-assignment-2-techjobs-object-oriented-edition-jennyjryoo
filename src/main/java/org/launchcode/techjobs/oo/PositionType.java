@@ -9,8 +9,7 @@ public class PositionType extends JobField {
     }
 
     public PositionType(String value) {
-        super();
-        this.setValue(value);
+        super(value);
     }
 
     @Override

@@ -9,8 +9,7 @@ public class Employer extends JobField {
     }
 
     public Employer(String value) {
-        super();
-        this.setValue(value);
+        super(value);
     }
 
     @Override

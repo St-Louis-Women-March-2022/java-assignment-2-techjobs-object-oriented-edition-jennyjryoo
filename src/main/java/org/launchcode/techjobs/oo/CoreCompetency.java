@@ -9,8 +9,7 @@ public class CoreCompetency extends JobField {
     }
 
     public CoreCompetency(String value) {
-        super();
-        this.setValue(value);
+        super(value);
     }
 
     @Override

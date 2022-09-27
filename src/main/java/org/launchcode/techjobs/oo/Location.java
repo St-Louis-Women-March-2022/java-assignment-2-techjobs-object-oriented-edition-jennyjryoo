@@ -9,8 +9,7 @@ public class Location extends JobField {
     }
 
     public Location(String value) {
-        super();
-        this.setValue(value);
+        super(value);
     }
 
     @Override
